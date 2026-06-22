@@ -516,7 +516,7 @@ function abrirPizza() {
 }
 
 function editarPizza(id) {
-  const p = cPizzas.find(x => x._id === id);
+  const p = cPizzas.find(x => String(x._id) === String(id));
   if (!p) return;
   document.getElementById('m-pizza-t').textContent = 'Editar Pizza';
   document.getElementById('p-id').value   = p._id;
@@ -612,7 +612,7 @@ function abrirCliente() {
 }
 
 function editarCliente(id) {
-  const c = cClientes.find(x => x._id === id);
+  const c = cClientes.find(x => String(x._id) === String(id));
   if (!c) return;
   document.getElementById('m-cli-t').textContent    = 'Editar Cliente';
   document.getElementById('c-id').value     = c._id;
